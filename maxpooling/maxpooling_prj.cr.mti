@@ -1,12 +1,14 @@
-C:/Users/phamh/Documents/VHDL/maxpooling/dpmem.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/dpmem.vhd
+C:/Users/phamh/Documents/VHDL/maxpooling/datapath.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/datapath.vhd
 Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity dpmem
--- Compiling architecture rtl of dpmem
+-- Loading package NUMERIC_STD
+-- Loading package mylib
+-- Compiling entity datapath
+-- Compiling architecture rtl of datapath
 
 } {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/counter_index.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/counter_index.vhd
 Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
@@ -18,45 +20,15 @@ Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling entity counter_index
 -- Compiling architecture rtl of counter_index
 
-} {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd
+} {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/dpmem.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/dpmem.vhd
 Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Loading package mylib
--- Compiling entity maxpooling_tb
--- Compiling architecture rtl of maxpooling_tb
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(38): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(53): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(57): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(61): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(65): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(69): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(73): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(77): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(81): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(85): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(89): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(93): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(97): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(101): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(105): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Warning: C:/Users/phamh/Documents/VHDL/maxpooling/maxpooling_tb.vhd(109): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-
-} {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/datapath.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/datapath.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Loading package NUMERIC_STD
--- Loading package mylib
--- Compiling entity datapath
--- Compiling architecture rtl of datapath
+-- Compiling entity dpmem
+-- Compiling architecture rtl of dpmem
 
 } {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/controller.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/controller.vhd
 Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
@@ -98,6 +70,14 @@ Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Compiling entity maxpooling
 -- Compiling architecture rtl of maxpooling
 
+} {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/mux.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/mux.vhd
+Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux
+-- Compiling architecture Behaviral of mux
+
 } {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/counter2.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/counter2.vhd
 Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Loading package STANDARD
@@ -107,13 +87,5 @@ Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity counter2
 -- Compiling architecture rtl of counter2
-
-} {} {}} C:/Users/phamh/Documents/VHDL/maxpooling/mux.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none C:/Users/phamh/Documents/VHDL/maxpooling/mux.vhd
-Model Technology ModelSim SE-64 vcom 10.5 Compiler 2016.02 Feb 13 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity mux
--- Compiling architecture Behaviral of mux
 
 } {} {}}

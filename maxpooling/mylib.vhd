@@ -81,13 +81,13 @@ port(
 	clk,reset: in std_logic;
 	we_a,we_c: in std_logic;-- tin hieu cho phep viet vao bo nho tung ma tran
 	re_a,re_c: in std_logic;
-	rowA,colA:in std_logic_vector (ADDR_WIDTH-1 downto 0);
+	rowA,colA:in std_logic_vector (ADDR_WIDTH/2-1 downto 0);
 	addr_WA: in  std_logic_vector(ADDR_WIDTH -1 downto 0);
 	data_inA: in std_logic_vector (DATA_WIDTH-1 downto 0);
 	data_outC: out std_logic_vector (DATA_WIDTH-1 downto 0);
 	sel_0,sel:in std_logic;
 	ld_m,ld_n,ld_i,ld_j,ld_index: in std_logic;
-	za,zm,zn,zi,zj: out std_logic;
+	za,zm,zn,zi,zj, sel_max: out std_logic;
 	en_m,en_n,en_i,en_j,en_index:in std_logic
 
 );

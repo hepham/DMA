@@ -104,7 +104,7 @@ port(
 	en_m,en_n,en_i,en_j,en_index: out std_logic;
 	za,zm,zn,zi,zj: in std_logic;
 	sel_0,sel: out std_logic;
-	sel_max:out std_logic;
+	sel_max:in std_logic;
 	done: out std_logic
 );
 end component controller;

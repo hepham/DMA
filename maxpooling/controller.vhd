@@ -18,7 +18,7 @@ port(
 end controller;
 
 architecture bev of controller is 
-type State_type is (s0,s1,s2,s21,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15);
+type State_type is (s0,s1,s2,s21,s3,s4,s5,s6,s61,s7,s8,s81,s9,s10,s11,s12,s121,s122,s13,s14,s15);
 signal state: State_type;
 begin
 --state process
@@ -53,17 +53,22 @@ FSM : process(clk,reset)
 			else state <= s10;
 			end if;
 		when s6 =>
+			 state <= s61;	
+		when s61 =>
 			 state <= s7;		
 		when s7 =>
 			--state<=s8;
 			if(sel_max ='1')then state<=s8;
 			else state<=s9;
 			end if;
-		when s8 => state<=s9;
+		when s8 => state<=s81;
+		when s81 => state<=s9;
 		when s9 => state<=s5;
 		when s10=>state <=s4;
 		when s11=>state<=s12;
-		when s12=>state<=s3;
+		when s12=>state<=s121;
+		when s121=>state<=s122;
+		when s122=>state<=s3;
 		when s13=> state<=s2;
 		when s14 => state <= s15;
 		when s15 => 
@@ -80,10 +85,10 @@ FSM : process(clk,reset)
 --combinational logic 
 we_a <='1' when state = s21 else  '0';
 --we_k <='1' when state = s22 else  '0';
-re_a <='1' when state = s6 else  '0';
+re_a <='1' when (state = s6 or state=s122) else  '0';
 --re_k <='1' when state = s6 else  '0';
-re_c <='1' when (state = s6 ) else '0';
-we_c <='1' when (state = s8 or state = s12) else '0';
+re_c <='1' when (state = s6  or state=s81 or state=s122) else '0';
+we_c <='1' when (state = s8 or state = s121) else '0';
 en_m <='1' when state = s13 else '0';
 en_n <='1' when state = s11 else '0';
 en_index <='1' when state = s11 else '0';
@@ -94,9 +99,9 @@ ld_index <='1' when (state = s0) else '0';
 ld_n <='1' when (state = s0 or state = s13) else '0';
 ld_i <='1' when (state = s0 or state = s11) else '0';
 ld_j <='1' when (state = s0 or state = s10) else '0';
-sel<='0' when state=s12 else '1';
+sel<='0' when (state=s121 or state=s21) else '1';
 
-sel_0 <='1' when state = s12  else '0';
+sel_0 <='1' when state = s121  else '0';
 --sel_max<='1' when state =s7 else '0';
 done <='1' when ( state = s14) else '0';
 

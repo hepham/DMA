@@ -55,7 +55,7 @@ port map (
 	data_out,
 	sel_0,sel,
 	ld_m,ld_n,ld_i,ld_j,ld_index,
-	za,zm,zn,zi,zj,
+	za,zm,zn,zi,zj, sel_max,
 	en_m,en_n,en_i,en_j,en_index
 );
 end rtl;

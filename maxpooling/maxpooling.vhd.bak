@@ -36,7 +36,7 @@ port map(clk,reset,
 	ld_m,ld_n,ld_i,ld_j,ld_index,
 	en_m,en_n,en_i,en_j,en_index,
 	za,zm,zn,zi,zj,
-	sel_0,
+	sel_0,sel,
 	sel_max,
 	done);
 
@@ -52,10 +52,10 @@ port map (
 	rowA,colA,
 	addr_WA,
 	data_inA,
-	data_out,
+	data_outC,
 	sel_0,sel,
 	ld_m,ld_n,ld_i,ld_j,ld_index,
-	za,zm,zn,zi,zj,
+	za,zm,zn,zi,zj, sel_max,
 	en_m,en_n,en_i,en_j,en_index
 );
 end rtl;

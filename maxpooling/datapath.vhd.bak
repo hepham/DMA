@@ -17,9 +17,9 @@ port(
 	addr_WA: in  std_logic_vector(ADDR_WIDTH -1 downto 0);
 	data_inA: in std_logic_vector (DATA_WIDTH-1 downto 0);
 	data_outC: out std_logic_vector (DATA_WIDTH-1 downto 0);
-	sel_0:in std_logic;
+	sel_0,sel:in std_logic;
 	ld_m,ld_n,ld_i,ld_j,ld_index: in std_logic;
-	za,zm,zn,zi,zj: out std_logic;
+	za,zm,zn,zi,zj, sel_max: out std_logic;
 	en_m,en_n,en_i,en_j,en_index:in std_logic
 
 );
@@ -29,23 +29,22 @@ architecture rtl of datapath is
 signal n,j,com_n,com_j,index:std_logic_vector (ADDR_WIDTH-1 downto 0);
 signal m,i,com_m,com_i:std_logic_vector (ADDR_WIDTH/2-1 downto 0);
 signal out_a,out_k:std_logic_vector (DATA_WIDTH-1 downto 0);
-signal out_c:std_logic_vector (DATA_WIDTH-1 downto 0);
+signal out_c:std_logic_vector (DATA_WIDTH-1 downto 0):="0000000000000000";
 signal adder1,dtin_0,dtin_max,dtin: std_logic_vector(DATA_WIDTH-1 downto 0);
 signal data_in0: std_logic_vector(DATA_WIDTH-1 downto 0):= "0000000000000000";
 signal	addr_A: std_logic_vector (DATA_WIDTH-1 downto 0);
 signal	addr_C: std_logic_vector (DATA_WIDTH-1 downto 0);
-signal sel_max:std_logic;
+signal sellect_max:std_logic;
 begin 
 --MUX
-
 
 za <='0' when addr_WA<(rowA*colA)-"0000000000000001" else '1';
 --zk <='0' when addr_WK<(rowK*rowK)-"0000000000000001" else '1';
 
 com_m <= rowA - "00000010" ;
 com_n <= (colA - "00000010")*"00000001";
-com_i <= "00000010";
-com_j <=  "00000010"*"00000001";
+com_i <= "00000001";
+com_j <=  "00000001"*"00000001";
 
 --adder1 
 --adder1<= out_c + out_a * out_k;
@@ -54,8 +53,9 @@ com_j <=  "00000010"*"00000001";
 addr_C<= index;
 
 --adder3 
-addr_A<= rowA * ( m+i) +n + j;
-sel_max <='1';
+addr_A<= rowA * ( m+i) +n + j+1;
+sel_max<='1' when out_c<out_a else '0';
+sellect_max<='1'when out_c<out_a else '0';
 
 --mux chon reset c=0
 MUX_reset: mux
@@ -70,7 +70,7 @@ generic map(DATA_WIDTH)
 PORT MAP(
 		out_a,
 		out_c,
-		sel_max,
+		sellect_max,
 		dtin_max);
 --matran a
 MUX_sel: mux
@@ -92,7 +92,7 @@ mattrix_C: dpmem
 generic map(DATA_WIDTH)
 port map(clk,
 	we_c,re_c ,addr_C,
-	dtin_max,
+	dtin,
 	addr_C,
 	out_c);
 

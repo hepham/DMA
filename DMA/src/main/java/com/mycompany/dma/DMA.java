@@ -44,7 +44,7 @@ public class DMA {
             String[] line = sc.nextLine().trim().split(" ");
             width = line.length;
             for (int j = 0; j < line.length; j++) {
-                list.add(Integer.parseInt(line[j]));
+                list.add(Integer.parseInt(line[j],16));
             }
         }
         height = list.size() / width;
